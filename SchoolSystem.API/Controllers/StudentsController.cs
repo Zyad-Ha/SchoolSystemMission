@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SchoolSystem.BL.DTOs.StudentDto;
-using SchoolSystem.BL.Services;
+using SchoolSystem.BL.Services.StudentServices;
 
 namespace SchoolSystem.API.Controllers
 {

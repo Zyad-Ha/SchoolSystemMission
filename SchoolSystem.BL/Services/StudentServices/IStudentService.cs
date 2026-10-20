@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SchoolSystem.BL.Services
+namespace SchoolSystem.BL.Services.StudentServices
 {
     public interface IStudentService
     {

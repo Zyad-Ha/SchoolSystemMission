@@ -1,8 +1,12 @@
 
 using Microsoft.EntityFrameworkCore;
-using SchoolSystem.BL.Services;
+using SchoolSystem.BL.Services.StudentServices;
+using SchoolSystem.BL.Services.SubjectServices;
+using SchoolSystem.BL.Services.TeacherServices;
 using SchoolSystem.DAL.Data;
 using SchoolSystem.DAL.Repos.StudentRepos;
+using SchoolSystem.DAL.Repos.SubjectRepos;
+using SchoolSystem.DAL.Repos.TeacherRepos;
 
 namespace SchoolSystem.API
 {
@@ -23,6 +27,12 @@ namespace SchoolSystem.API
 
             builder.Services.AddScoped<IStudentRepo, StudentRepo>();
             builder.Services.AddScoped<IStudentService, StudentService>();
+
+            builder.Services.AddScoped<ISubjectRepo, SubjectRepo>();
+            builder.Services.AddScoped<ISubjectService, SubjectService>();
+
+            builder.Services.AddScoped<ITeacherRepo,TeacherRepo>();
+            builder.Services.AddScoped<ITeacherService, TeacherService>();
 
             var app = builder.Build();
 
