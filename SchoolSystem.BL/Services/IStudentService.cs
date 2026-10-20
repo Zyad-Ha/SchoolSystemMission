@@ -1,0 +1,19 @@
+﻿using SchoolSystem.BL.DTOs.StudentDto;
+using SchoolSystem.DAL.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SchoolSystem.BL.Services
+{
+    public interface IStudentService
+    {
+        IEnumerable<WriteStudentDto> GetAll();
+        void Add(WriteStudentDto studentDto);
+        void Update(int id,WriteStudentDto studentDto);
+        void Delete(int id);
+
+    }
+}
