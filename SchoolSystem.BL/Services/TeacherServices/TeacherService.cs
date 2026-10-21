@@ -31,13 +31,14 @@ namespace SchoolSystem.BL.Services.TeacherServices
             _teacherRepo.SaveChanges();
         }
 
-        public WriteTeacherDto GetById(int id)
+        public ReadTeacherDto GetById(int id)
         {
             var idExisting = _teacherRepo.GetById(id);
             if (idExisting == null) throw new Exception($"Teacher with id {id} not found");
 
-            return new WriteTeacherDto
+            return new ReadTeacherDto
             {
+                Id = idExisting.Id,
                 Name = idExisting.Name,
                 Email = idExisting.Email,
                 Phone = idExisting.Phone,

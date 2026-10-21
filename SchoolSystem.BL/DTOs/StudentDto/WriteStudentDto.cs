@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SchoolSystem.BL.DTOs.StudentDto
@@ -14,6 +10,7 @@ namespace SchoolSystem.BL.DTOs.StudentDto
         public string Name { get; set; }
         [Required, EmailAddress]
         public string Email { get; set; }
+        public List<int> TeacherIds { get; set; }
         public int LaptopId { get; set; }
     }
 }

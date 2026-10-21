@@ -1,4 +1,5 @@
-﻿using SchoolSystem.DAL.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using SchoolSystem.DAL.Data;
 using SchoolSystem.DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,8 @@ namespace SchoolSystem.DAL.Repos.StudentRepos
 
         public IEnumerable<Student> GetAll()
         {
-            return _context.Students.ToList();
+            return _context.Students.Include(x => x.Teachers)
+                .ToList();
         }
 
         public Student GetById(int id)

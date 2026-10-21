@@ -10,9 +10,9 @@ namespace SchoolSystem.BL.Services.StudentServices
 {
     public interface IStudentService
     {
-        IEnumerable<WriteStudentDto> GetAll();
+        IEnumerable<ReadStudentDto> GetAll();
         void Add(WriteStudentDto studentDto);
-        void Update(int id,WriteStudentDto studentDto);
+        void Update(int id,UpdateStudentDto studentDto);
         void Delete(int id);
 
     }

@@ -9,7 +9,7 @@ namespace SchoolSystem.BL.Services.TeacherServices
 {
     public interface ITeacherService
     {
-        WriteTeacherDto GetById(int id);
+        ReadTeacherDto GetById(int id);
         void Add(WriteTeacherDto writeTeacherDto);
     }
 }
